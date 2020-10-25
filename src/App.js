@@ -88,9 +88,7 @@ function App(props) {
   };
   return (
     <div className='app'>
-      <div dangerouslySetInnerHTML={test1()}>
-        <h1>HELLO AJ</h1>
-      </div>
+      <p>kjdfhgjusdhfju</p>
       {DATATOSHOW.map(({ name, path }, index) => {
         return (
           <div>
