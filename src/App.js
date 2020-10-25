@@ -88,7 +88,6 @@ function App(props) {
   };
   return (
     <div className='app'>
-      <p>kjdfhgjusdhfju</p>
       {DATATOSHOW.map(({ name, path }, index) => {
         return (
           <div>
