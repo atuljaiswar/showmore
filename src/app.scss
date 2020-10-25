@@ -1,0 +1,50 @@
+.app {
+  margin-top: 50px;
+  width: 45%;
+
+  > div {
+    margin-left: 2%;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    position: relative;
+    background-color: red;
+    display: inline-block;
+
+    img {
+      border-radius: 100%;
+      width: 40px;
+      height: 40px;
+      border: 1px solid;
+    }
+
+    .icon,
+    img,
+    span:not(.arrow) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .arrow {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: 60px;
+    border-radius: 50%;
+    border: 1px solid #000;
+
+    .fa-chevron-down {
+      transition: all ease-in 0.3s;
+    }
+
+    .swap {
+      transform: rotate(180deg);
+      transition: all ease-in 0.3s;
+    }
+  }
+}
