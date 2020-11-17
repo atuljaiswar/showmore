@@ -2,95 +2,25 @@ import React from 'react';
 import './app.scss';
 import './assets/style/reset.scss';
 import Container from './container';
-import { Shinchan, Hagemaroo } from './assets/images/index';
 
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import Sections from 'components/Sections';
+import 'style/style.scss';
 function App(props) {
-  console.log('props', props);
-  const { switchIcon, isIconClicked } = props;
+  // const { switchIcon, isIconClicked } = props;
 
-  const DATA = [
-    {
-      path: Shinchan,
-      name: 'Atul Jaiswar',
-    },
-    {
-      path: '',
-      name: 'Rahul Gupta',
-    },
-    {
-      path: Hagemaroo,
-      name: 'Hagemaroo',
-    },
-    {
-      path: '',
-      name: 'Vitthal Jadhav',
-    },
-    {
-      path: '',
-      name: 'Deva Gupta',
-    },
-    {
-      path: '',
-      name: 'Vitthal Jadhav',
-    },
-    {
-      path: '',
-      name: 'Deva Gupta',
-    },
-    {
-      path: '',
-      name: 'Vitthal Jadhav',
-    },
-    {
-      path: '',
-      name: 'Deva Gupta',
-    },
-    {
-      path: '',
-      name: 'Vitthal Jadhav',
-    },
-    {
-      path: '',
-      name: 'Deva Gupta',
-    },
-    {
-      path: '',
-      name: 'Vitthal Jadhav',
-    },
-    {
-      path: '',
-      name: 'Deva Gupta',
-    },
-    {
-      path: '',
-      name: 'Vitthal Jadhav',
-    },
-    {
-      path: '',
-      name: 'Deva Gupta',
-    },
+  //const index = !isIconClicked ? 4 : DATA.length;
+  //const DATATOSHOW = DATA.filter((_, i) => i <= index);
 
-    {
-      path: '',
-      name: 'Anil Jaiswar',
-    },
-    {
-      path: Hagemaroo,
-      name: 'Hagemaroo',
-    },
-  ];
-
-  const index = !isIconClicked ? 4 : DATA.length;
-  const DATATOSHOW = DATA.filter((_, i) => i <= index);
-  const test = '<h1>Hello</h1><p>Hello Atul</p>';
-  const test1 = () => {
-    return { __html: test };
-  };
   return (
     <div className='app'>
-      {DATATOSHOW.map(({ name, path }, index) => {
+      <Header />
+      <Sections />
+      <Footer />
+      {/* {DATATOSHOW.map(({ name, path }, index) => {
         return (
-          <div>
+          <div key={index}>
             {path ? (
               <img src={path} alt={name} />
             ) : (
@@ -101,7 +31,7 @@ function App(props) {
                 {
                   <span className='icon'>
                     <i
-                      class={`fa fa-chevron-down ${
+                      className={`fa fa-chevron-down ${
                         isIconClicked ? 'swap' : ''
                       }`}
                       aria-hidden='true'
@@ -112,7 +42,7 @@ function App(props) {
             ) : null}
           </div>
         );
-      })}
+      })} */}
     </div>
   );
 }
